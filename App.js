@@ -13,7 +13,7 @@ const port = process.env.PORT || 3001
 app.listen(port, () => console.log(`Servidor funcionando na porta ${port}`))
 
 db.on("error", () => console.log("Connection error"))
-db.once("open", () => console.log("successfully connected to database"))
+db.once("open", () => console.log("Successfully connected to database"))
 
 app.use(cors())
 

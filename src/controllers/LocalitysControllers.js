@@ -1,9 +1,8 @@
 import localitys from "../models/LocalitysModels.js";
 
-
 class LocalitysController {
     static getLocalitys = (req, res) => {
-        localitys.find((e, localitys) => {
+       localitys.find((e, localitys) => {
           if (e) {
             res.status(500).send({ message: `${e.message} - Fail search` });
           } else {
@@ -13,7 +12,7 @@ class LocalitysController {
       };
 
       static postLocalitys = (req, res) => {
-        const registerLocality = new localitys(req.body)
+      const registerLocality = new localitys(req.body)
       registerLocality.save(registerLocality, (e) => {
         if (e) {
           res.status(500).send({ message: `${e.message} - Fail to post` });
