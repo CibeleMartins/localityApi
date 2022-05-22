@@ -3,7 +3,7 @@ import LocalitysController from '../controllers/LocalitysControllers.js';
 
 const router = Router()
 
-router.get('/localitys', LocalitysController.getLocalitys)
+router.get('/', LocalitysController.getLocalitys)
 router.post('/localitys', LocalitysController.postLocalitys)
 
 
